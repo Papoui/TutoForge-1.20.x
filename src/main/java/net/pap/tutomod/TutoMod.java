@@ -64,6 +64,7 @@ public class TutoMod
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
+        var test = 1;
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
