@@ -6,11 +6,10 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.pap.tutomod.block.ModBlocks;
 import net.pap.tutomod.item.ModCreativeModeTabs;
 import net.pap.tutomod.item.ModItems;
 import org.slf4j.Logger;
@@ -25,6 +24,8 @@ public class TutoMod {
 
     public TutoMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModBlocks.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
@@ -47,6 +48,8 @@ public class TutoMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.RAW_SAPPHIRE);
+            event.accept(ModBlocks.SAPPHIRE_BLOCK);
+            event.accept(ModBlocks.SAPPHIRE_ORE);
         }
     }
 

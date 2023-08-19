@@ -1,5 +1,7 @@
 {
   "item.tutomod.sapphire": "Sapphire",
   "item.tutomod.raw_sapphire": "Raw sapphire",
-  "creativetab.tuto_tab": "Sapphire Tab"
+  "creativetab.tuto_tab": "Sapphire Tab",
+  "block.tutomod.sapphire_block": "Block of Sapphire",
+  "block.tutomod.sapphire_ore": "Sapphire ore"
 }
